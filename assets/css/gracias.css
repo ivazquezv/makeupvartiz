@@ -1,0 +1,61 @@
+/* ------------------------------
+   PÁGINA DE GRACIAS – MAKE UP VARTIZ
+------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  font-family: var(--font-body, "Inter", sans-serif);
+}
+
+.gracias {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.gracias-content {
+  max-width: 600px;
+}
+
+.gracias-icon {
+  font-size: 80px;
+  color: var(--accent, #d4a373);
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: var(--font-title, "Marcellus", serif);
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.1rem;
+  opacity: 0.85;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Botón volver */
+.volver-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: var(--accent, #d4a373);
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.volver-btn:hover {
+  background: #e7b98a;
+}
