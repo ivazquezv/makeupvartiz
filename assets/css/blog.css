@@ -1,0 +1,171 @@
+/* ================================
+   ESTILO GENERAL DEL ARTÍCULO
+=================================== */
+
+.blog-article {
+  max-width: 900px;
+  margin: 140px auto 80px auto;
+  padding: 0 20px;
+  font-family: "Marcellus", serif;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* ================================
+   TÍTULO Y METADATOS
+=================================== */
+
+.blog-title {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.blog-meta {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
+
+/* ================================
+   IMAGEN PRINCIPAL
+=================================== */
+
+.blog-cover {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.blog-cover:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+/* ================================
+   CONTENIDO DEL ARTÍCULO
+=================================== */
+
+.blog-content p {
+  margin-bottom: 22px;
+  font-size: 1.15rem;
+  color: #eaeaea;
+}
+
+.blog-content h2 {
+  font-size: 2rem;
+  margin: 50px 0 20px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+}
+
+.blog-content h2::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background: #c9a86a;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+/* ================================
+   BOTÓN SECUNDARIO
+=================================== */
+
+.blog-content .btn-secondary {
+  display: inline-block;
+  margin: 30px 0;
+  padding: 12px 26px;
+  border: 1px solid #c9a86a;
+  color: #c9a86a;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.blog-content .btn-secondary:hover {
+  background: #c9a86a;
+  color: #000;
+}
+
+/* ================================
+   FIGURA + PIE DE FOTO
+=================================== */
+
+.blog-figure {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.blog-figure img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.blog-figure figcaption {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.5;
+}
+
+/* ================================
+   VIDEO YOUTUBE RESPONSIVE PREMIUM
+=================================== */
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción 16:9 */
+  margin: 50px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+  transition:
+    box-shadow 0.4s ease,
+    transform 0.4s ease;
+}
+
+.video-container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width: 768px) {
+  .blog-title {
+    font-size: 2.2rem;
+  }
+
+  .blog-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .blog-content p {
+    font-size: 1.05rem;
+  }
+}
