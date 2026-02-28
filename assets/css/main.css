@@ -421,7 +421,7 @@ h3 {
 }
 
 /* ------------------------------
-   CURSOR PINCEL PREMIUM
+   CURSOR PINCEL PREMIUM (sin blend-mode)
 ------------------------------ */
 .brush-cursor {
   position: fixed;
@@ -429,35 +429,35 @@ h3 {
   height: 60px;
   background: radial-gradient(
     circle,
-    rgba(212, 163, 115, 0.55) 0%,
-    rgba(212, 163, 115, 0.25) 40%,
-    rgba(212, 163, 115, 0.05) 75%,
+    rgba(212, 163, 115, 0.45) 0%,
+    rgba(212, 163, 115, 0.18) 40%,
+    rgba(212, 163, 115, 0.04) 75%,
     transparent 100%
   );
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: screen;
   opacity: 0.9;
-  filter: blur(10px);
+  filter: blur(12px);
   transition: transform 0.05s linear;
-  z-index: 2000;
+  z-index: 999999;
 }
 
+/* Sparkles sin blend-mode */
 .sparkle {
   position: fixed;
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   background: radial-gradient(
     circle,
-    rgba(233, 199, 161, 0.9) 0%,
-    rgba(233, 199, 161, 0.4) 40%,
+    rgba(233, 199, 161, 0.85) 0%,
+    rgba(233, 199, 161, 0.35) 40%,
     transparent 100%
   );
   border-radius: 50%;
   pointer-events: none;
-  mix-blend-mode: screen;
   filter: blur(6px);
   animation: sparkleFade 1.2s ease-out forwards;
+  z-index: 999998;
 }
 
 @keyframes sparkleFade {
@@ -467,7 +467,7 @@ h3 {
   }
   100% {
     opacity: 0;
-    transform: scale(2.4);
+    transform: scale(2.2);
   }
 }
 

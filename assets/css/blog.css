@@ -2,14 +2,21 @@
    ESTILO GENERAL DEL ARTÍCULO
 =================================== */
 
+ne-height: 1.7;
+}
+.blog-wrapper {
+  margin-top: 140px;
+}
+
 .blog-article {
   max-width: 900px;
-  margin: 140px auto 80px auto;
+  margin: 0 auto 80px auto;
   padding: 0 20px;
   font-family: "Marcellus", serif;
   color: #fff;
   line-height: 1.7;
 }
+
 
 /* ================================
    TÍTULO Y METADATOS
@@ -39,13 +46,10 @@
   border-radius: 8px;
   margin-bottom: 40px;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
 }
 
 .blog-cover:hover {
-  transform: scale(1.01);
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
 }
 
@@ -133,13 +137,11 @@
   overflow: hidden;
   background: #000;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-  transition:
-    box-shadow 0.4s ease,
-    transform 0.4s ease;
+  transition: box-shadow 0.4s ease;
 }
 
+/* FIX: eliminar transform para evitar stacking context */
 .video-container:hover {
-  transform: scale(1.01);
   box-shadow: 0 0 35px rgba(255, 255, 255, 0.12);
 }
 
@@ -150,12 +152,15 @@
   width: 100%;
   height: 100%;
   border: 0;
-  isolation: isolate;
-}
 
-/* Evitar doble cursor sobre iframes */
-.video-container iframe {
-  pointer-events: none;
+  /* FIX: evitar cursor nativo dentro del iframe */
+  cursor: none !important;
+
+  /* FIX: evitar stacking conflictivo */
+  isolation: unset;
+
+  /* FIX: permitir eventos para que el cursor premium siga funcionando */
+  pointer-events: auto;
 }
 
 /* ================================

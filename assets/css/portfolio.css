@@ -2,12 +2,10 @@
    PORTFOLIO PAGE – MAKE UP VARTIZ
 ------------------------------ */
 
-body {
+/* Encapsulado para evitar conflictos globales */
+.portfolio-page {
   background: #000;
   color: #fff;
-}
-
-.portfolio-page {
   padding: 120px 20px 60px;
   text-align: center;
 }
@@ -73,8 +71,8 @@ body {
   margin-bottom: 15px;
 }
 
-/* BOTÓN SECUNDARIO */
-.btn-secondary {
+/* BOTÓN SECUNDARIO – encapsulado para evitar conflicto con blog.css */
+.portfolio-page .btn-secondary {
   display: inline-block;
   padding: 10px 20px;
   border: 1px solid var(--accent, #d4a373);
@@ -84,7 +82,7 @@ body {
   transition: 0.3s ease;
 }
 
-.btn-secondary:hover {
+.portfolio-page .btn-secondary:hover {
   background: var(--accent, #d4a373);
   color: #000;
 }
