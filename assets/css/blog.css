@@ -2,21 +2,15 @@
    ESTILO GENERAL DEL ARTÍCULO
 =================================== */
 
-ne-height: 1.7;
-}
-.blog-wrapper {
-  margin-top: 140px;
-}
-
 .blog-article {
   max-width: 900px;
   margin: 0 auto 80px auto;
   padding: 0 20px;
+  padding-top: 140px;
   font-family: "Marcellus", serif;
   color: #fff;
   line-height: 1.7;
 }
-
 
 /* ================================
    TÍTULO Y METADATOS
