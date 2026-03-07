@@ -174,3 +174,36 @@
     font-size: 1.05rem;
   }
 }
+
+/* ================================
+    VIDEO THUMBNAIL PREMIUM 
+=================================== */
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+.video-thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.video-thumbnail .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  opacity: 0.8;
+  transition: 0.3s ease;
+}
+
+.video-thumbnail:hover .play-button {
+  opacity: 1;
+}
