@@ -1,0 +1,98 @@
+/* ------------------------------
+   GALERÍA VISUAL – MAKE UP VARTIZ
+------------------------------ */
+
+.portfolio-page .photo-gallery {
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+/* TÍTULO PRINCIPAL */
+.portfolio-page .gallery-heading {
+  font-family: var(--font-title, "Marcellus", serif);
+  font-size: 2.4rem;
+  color: var(--accent, #d4a373);
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* DESCRIPCIÓN */
+.portfolio-page .gallery-description {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  opacity: 0.8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* BOTÓN VOLVER */
+.portfolio-page .gallery-back {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.portfolio-page .gallery-back .btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--accent, #d4a373);
+  color: var(--accent, #d4a373);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.portfolio-page .gallery-back .btn-secondary:hover {
+  background: var(--accent, #d4a373);
+  color: #000;
+}
+
+/* GRID DE FOTOS */
+.portfolio-page .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* ITEM */
+.portfolio-page .gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #222;
+  background: #111;
+  transition: 0.3s ease;
+}
+
+.portfolio-page .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+/* EFECTO HOVER PREMIUM */
+.portfolio-page .gallery-item:hover img {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+.portfolio-page .gallery-item:hover {
+  box-shadow: 0 0 25px rgba(212, 163, 115, 0.25);
+  transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .portfolio-page .gallery-heading {
+    font-size: 2rem;
+  }
+
+  .portfolio-page .gallery-description {
+    font-size: 1rem;
+  }
+}

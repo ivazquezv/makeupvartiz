@@ -1,97 +1,97 @@
 /* ------------------------------
-   PORTFOLIO PAGE – MAKE UP VARTIZ
+   GALERÍA – MAKE UP VARTIZ
 ------------------------------ */
 
-/* Encapsulado para evitar conflictos globales */
-.portfolio-page {
-  background: #000;
+/* CONTENEDOR INTERNO */
+.gallery-section {
+  margin: 120px auto 60px;
+  max-width: 900px;
+  text-align: left;
+  padding: 0 20px;
   color: #fff;
-  padding: 120px 20px 60px;
+}
+
+/* TÍTULO PRINCIPAL */
+.gallery-title {
+  font-family: var(--font-title, "Marcellus", serif);
+  font-size: 2.2rem;
+  color: var(--accent, #d4a373);
   text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
 }
 
-.portfolio-title {
+/* CATEGORÍAS */
+.gallery-category {
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #333;
+}
+
+.gallery-category h3 {
   font-family: var(--font-title, "Marcellus", serif);
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  color: var(--accent, #d4a373);
-}
-
-.portfolio-title i {
-  font-size: 40px;
-  margin-right: 8px;
-}
-
-.portfolio-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.8;
-  margin-bottom: 50px;
-}
-
-/* GRID */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 35px;
-  margin-bottom: 60px;
-}
-
-/* CARD */
-.portfolio-card {
-  background: #111;
-  border-radius: 10px;
-  overflow: hidden;
-  border: 1px solid #222;
-  transition: 0.3s ease;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 25px rgba(212, 163, 115, 0.25);
-}
-
-.portfolio-card img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-}
-
-.portfolio-info {
-  padding: 20px;
-}
-
-.portfolio-info h3 {
-  font-family: var(--font-title, "Marcellus", serif);
-  color: var(--accent, #d4a373);
-  margin-bottom: 8px;
-}
-
-.portfolio-info p {
-  opacity: 0.8;
+  font-size: 1.6rem;
   margin-bottom: 15px;
+  letter-spacing: 0.3px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* BOTÓN SECUNDARIO – encapsulado para evitar conflicto con blog.css */
-.portfolio-page .btn-secondary {
-  display: inline-block;
-  padding: 10px 20px;
-  border: 1px solid var(--accent, #d4a373);
+/* ICONOS EN TÍTULOS */
+.gallery-category h3 i {
   color: var(--accent, #d4a373);
-  border-radius: 4px;
+  font-size: 1.4rem;
+}
+
+/* LISTAS */
+.gallery-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-list li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ICONOS EN LISTAS */
+.gallery-list li i {
+  color: var(--accent, #d4a373);
+  font-size: 1.1rem;
+}
+
+/* ENLACES */
+.gallery-list li a {
+  color: #ddd;
   text-decoration: none;
   transition: 0.3s ease;
 }
 
-.portfolio-page .btn-secondary:hover {
-  background: var(--accent, #d4a373);
-  color: #000;
+.gallery-list li a:hover {
+  color: var(--accent, #d4a373);
 }
 
-/* BOTÓN VOLVER */
-.portfolio-back {
-  margin-top: 20px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gallery-title {
+    font-size: 1.8rem;
+  }
+
+  .gallery-category h3 {
+    font-size: 1.4rem;
+  }
+
+  .gallery-list li {
+    font-size: 1rem;
+  }
 }
 
-.portfolio-back .btn-primary i {
-  margin-right: 6px;
+.portfolio-page {
+  padding-top: 60px; /* Ajuste perfecto para tu header fijo */
 }
