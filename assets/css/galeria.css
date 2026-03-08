@@ -50,11 +50,47 @@
   color: #000;
 }
 
-/* GRID DE FOTOS */
+/* ------------------------------
+   GRID DE FOTOS
+------------------------------ */
+
+/* Separación entre bloques */
 .portfolio-page .gallery-grid {
+  margin-bottom: 40px;
+}
+
+/* Desktop */
+.gallery-grid.two-columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid.three-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.focus-left {
+  object-position: left center !important;
+}
+
+.focus-right {
+  object-position: right center !important;
+}
+
+.focus-top {
+  object-position: center top !important;
+}
+
+.focus-bottom {
+  object-position: center bottom !important;
+}
+
+/* Centrado específico para fotos horizontales */
+.focus-center {
+  object-position: center center !important;
 }
 
 /* ITEM */
@@ -86,14 +122,22 @@
   transform: translateY(-4px);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .portfolio-page .gallery-heading {
-    font-size: 2rem;
-  }
+/* ------------------------------
+   RESPONSIVE
+------------------------------ */
 
-  .portfolio-page .gallery-description {
-    font-size: 1rem;
+/* Tablet */
+@media (max-width: 992px) {
+  .gallery-grid.three-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .gallery-grid.two-columns,
+  .gallery-grid.three-columns {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -104,7 +148,7 @@
 .portfolio-page .video-thumbnail {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* Mantiene proporción perfecta */
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border-radius: 10px;
   border: 1px solid #222;
@@ -155,18 +199,4 @@
   .portfolio-page .video-thumbnail .play-button {
     font-size: 2.4rem;
   }
-}
-
-.gallery-grid.two-columns {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.gallery-grid.one-column {
-  display: grid;
-  grid-template-columns: 1fr;
-  max-width: 600px;
-  margin: 0 auto 20px auto;
-  gap: 20px;
 }
