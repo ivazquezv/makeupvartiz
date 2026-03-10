@@ -1,0 +1,109 @@
+/* -----------------------------------------
+   BLOQUE IMAGEN + TEXTO (SERVICIOS / PACKS)
+----------------------------------------- */
+
+.service-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 60px auto;
+  max-width: 1100px;
+  padding: 20px;
+}
+
+/* Imagen */
+.service-block .service-image {
+  flex: 1;
+  max-width: 420px;
+}
+
+.service-block .service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #222;
+  background: #000;
+  transition: 0.3s ease;
+}
+
+.service-block .service-image img:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* Texto */
+.service-block .service-text {
+  flex: 1;
+  color: #fff;
+}
+
+.service-block .service-text h3 {
+  font-family: var(--font-title, "Marcellus", serif);
+  font-size: 1.9rem;
+  margin-bottom: 15px;
+  color: var(--accent, #d4a373);
+}
+
+.service-block .service-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.service-block .service-text ul li {
+  margin-bottom: 8px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.service-block .service-text ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent, #d4a373);
+}
+
+/* Imagen principal del servicio (más pequeña y centrada) */
+.gallery-grid.one-column .gallery-item img {
+  max-width: 420px; /* Ajusta este valor a tu gusto (350–500px) */
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+/* Centrar el contenedor */
+.gallery-grid.one-column {
+  display: flex;
+  justify-content: center;
+}
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 900px) {
+  .service-block {
+    flex-direction: column-reverse; /* TEXTO ARRIBA / IMAGEN ABAJO */
+    text-align: center;
+    gap: 25px;
+  }
+
+  .service-block .service-image {
+    max-width: 350px;
+  }
+
+  .service-block .service-text ul li {
+    padding-left: 0;
+  }
+
+  .service-block .service-text ul li::before {
+    display: none;
+  }
+}
