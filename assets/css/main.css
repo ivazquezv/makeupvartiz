@@ -797,7 +797,7 @@ h3 {
   margin-right: 6px;
   font-size: 18px;
 }
-/* Hace que todo el card sea clicable sin cambiar su estilo */
+/* El enlace ocupa todo el card sin alterar el layout */
 .service-card-link {
   display: block;
   width: 100%;
@@ -808,9 +808,9 @@ h3 {
   border-radius: 12px;
 }
 
-/* Mantiene tu hover original */
-.service-card:hover .service-card-link {
-  background: rgba(212, 163, 115, 0.08);
+/* Hover aplicado al card completo (no al contenido interno) */
+.service-card:hover {
   transform: translateY(-4px);
+  background: rgba(212, 163, 115, 0.08);
   transition: 0.3s ease;
 }
