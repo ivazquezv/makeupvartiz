@@ -180,7 +180,7 @@ h3 {
 ------------------------------ */
 .hero {
   height: 55vh; /* un poco más alto para respirar */
-  background: url("../img/hero/hero.jpg") center/cover no-repeat;
+
   display: flex;
   flex-direction: column; /* asegura que el logo + textos no se desplacen */
   align-items: center;
